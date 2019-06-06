@@ -16,12 +16,13 @@ body {
 
 .wrapper {
     width: 100%;
+    height: 100vh;
     overflow: hidden;
 }
 
 .container {
     width: 1140px;
-    min-height: 100vh;
+    height: 100vh;
     margin: 0 auto;
     display: flex;
 }
@@ -60,6 +61,12 @@ img {
     font-size: 36px;
     font-weight: 500;
     line-height: 30px;
+}
+
+.title-3 {
+    font-size: 20px;
+    line-height: 24px;
+    font-weight: 500;
 }
 
 /******************* common *******************/
@@ -188,7 +195,7 @@ img {
 .menu__link--doing:after {
     display: inline-block;
     position: absolute;
-    top: 2px;
+    top: 1px;
     left: 36px;
     height: 33px;
     border-radius: 2px;
@@ -259,21 +266,23 @@ img {
 }
 
 .enter:hover {
-    transform: scale(1.09);
-    -webkit-transform: scale(1.09);
-    -moz-transform: scale(1.09);
-    -ms-transform: scale(1.09);
-    -o-transform: scale(1.09);
+    transform: scale(1.08);
+    -webkit-transform: scale(1.08);
+    -moz-transform: scale(1.08);
+    -ms-transform: scale(1.08);
+    -o-transform: scale(1.08);
 }
 
 .content {
     padding: 20px 0 0 50px;
 }
 
-.header {
+.header,
+.editing__header {
     padding: 25px;
     display: flex;
     justify-content: space-between;
+    align-items: center;
     background: #FFFFFF;
     box-shadow: 0px 1px 10px rgba(182, 182, 182, 0.27);
     border-radius: 5px;
@@ -301,25 +310,45 @@ img {
     box-shadow: 0px 0px 15px #ED546D;
 }
 
-.content__row {
+.content__row,
+.editing__row {
     padding: 20px 60px;
     display: flex;
 }
 
-.content__row:nth-child(2n) {
+.card__content .content__rows {
+    height: 348px;
+    overflow: auto;
+}
+
+.content__row:nth-child(2n),
+.editing__row:nth-child(2n) {
     background: #F1F5F9;
     border-radius: 3px;
 } 
 
-.content__subtitle {
+.content__subtitle,
+.editing__subtitle {
     width: 355px;
     text-transform: uppercase;
     font-weight: 700;
 }
 
-.content__desc {
+.content__desc,
+.editing__desc {
     width: 550px;
     font-weight: 500;
+}
+
+.editing__desc .editing__link {
+    background: linear-gradient(194.01deg, #6A90FF 0.12%, #0A94FF 102.44%);
+    color: transparent;
+    -moz-background-clip: text;
+    -webkit-background-clip: text;
+}
+
+.editing__desc .editing__link:hover {
+    color: #0A94FF;
 }
 
 .content__text {
@@ -330,3 +359,112 @@ img {
     margin-bottom: 0;
 }
 
+.content__box {
+    margin-bottom: 40px;
+}
+
+.plus {
+    width: 56px;
+    height: 32px;
+    line-height: 32px;
+    text-align: center;
+    margin-right: 20px;
+    background: linear-gradient(208.66deg, #6A90FF 0.12%, #0A94FF 102.44%);
+    border-radius: 92px;
+}
+
+.plus:hover {
+    transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    -o-transform: scale(1.1);
+    box-shadow: 0px 0px 15px #6A90FF;
+}
+
+.editing {
+    margin-bottom: 58px;
+}
+
+.pagination__links {
+    width: 355px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 40px;
+    margin: 0 auto;
+}
+
+.prev,
+.next {
+    display: block;
+    position: relative;
+    cursor: pointer;
+}
+
+.next:after,
+.prev:after {
+    display: block;
+    content: '';
+    width: 9px;
+    height: 14px;
+    background: url(../img/arrow.png) no-repeat center;
+    position: absolute;
+    top: 50%;
+    margin-top: -7px;
+    left: 0;
+}
+
+.next {
+    transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+}
+
+.pagination__num {
+    width: 30px;
+    height: 30px;
+    display: block;
+    color: #405260;
+    background: #FFFFFF;
+    box-shadow: 0px 1px 10px rgba(182, 182, 182, 0.27);
+    border-radius: 5px;
+    text-align: center;
+    line-height: 30px;
+}
+
+.pagination__num:hover,
+.pagination__num--active {
+    color: #fff;
+    background: #9DBFE8;
+}
+
+.pagination__break {
+    display: block;
+    width: 136px;
+    height: 1px;
+    background: #D6E1EC;
+    border-radius: 1px;
+}
+
+::-webkit-scrollbar {
+    width: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+    width: 2px;
+    border-radius: 10px;
+    background-color: #c2c2c2;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+::-webkit-scrollbar-track {
+    width: 4px;
+    background-color: #fafafa;
+    -webkit-box-shadow: inset 0 0 2px rgba(0,0,0,0.2);
+    box-shadow: inset 0 0 2px rgba(0,0,0,0.2);
+}
