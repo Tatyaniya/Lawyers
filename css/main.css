@@ -652,6 +652,11 @@ input:focus {
     width: 1024px;
 }
 
+.company-content,
+.doing-container {
+    position: relative;
+}
+
 .company-content .header__title {
     margin-right: 15px;
 }
@@ -693,12 +698,7 @@ input:focus {
     color: #D6E1EC;
 }
 
-.header__choice {
-    display: block;
-    content: "по ИНН"
-}
-
-.header__choice {
+.choice {
     position: absolute;
     top: 0;
     left: 274px;
@@ -707,17 +707,19 @@ input:focus {
     position: absolute;
     background: url('../img/arrow-white.svg') no-repeat 72px 9px, linear-gradient(198.4deg, #6A90FF 0.12%, #0A94FF 102.44%);
     border-radius: 92px;
+    cursor: pointer;
 }
 
-.header__choice:after {
+.choice__toogle:after {
     display: block;
     content: "по ИНН";
     color: #fff;
     line-height: 32px;
     padding-left: 11px;
+    position: absolute;
 }
 
-.header__choice--name:after {
+.choice__toogle--name:after {
     display: block;
     content: "по наим";
     color: #fff;
@@ -827,6 +829,10 @@ input:focus {
     box-shadow: 0px 1px 10px rgba(182, 182, 182, 0.27);
     padding: 30px 25px 20px;
     border-radius: 5px;
+    position: absolute;
+    top: 20px;
+    right: 0;
+    display: none;
 }
 
 .doing-modal {

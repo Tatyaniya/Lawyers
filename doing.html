@@ -51,7 +51,7 @@
                     <h2 class="header__title">
                         События
                     </h2>
-                    <a href="#" class="edit-link header__link">Добавить</a>
+                    <a href="#" class="edit-link header__link" id="add-doing">Добавить</a>
                 </header>
                 <div class="content__data">
                     <div class="content__rows">
@@ -184,13 +184,13 @@
                         </div>
                     </nav>
                 </div>
+                <div class="doing-modal">
+                    <textarea type="text" class="doing-modal__message" placeholder="Текст"></textarea>
+                    <a href="#" class="doing-modal__save">Сохранить</a>
+                </div>
             </div>
         </div>
     </div>
-    </div>
-    <div class="doing-modal">
-        <textarea type="text" class="doing-modal__message" placeholder="Текст"></textarea>
-        <a href="#" class="doing-modal__save">Сохранить</a>
     </div>
     <script src="js/jquery-3.3.1.min.js"></script>
     <script src="js/jquery.arcticmodal-0.3.min.js"></script>

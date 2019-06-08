@@ -37,8 +37,10 @@
                     <div class="header__nav">
                         <div class="header__search">
                             <input type="text" class="header__input" placeholder="Поиск">
-                            <div class="header__choice"></div>
-                            <a href="#" class="add-link header__link">
+                            <div class="choice">
+                                <div class="choice__toogle"></div>
+                            </div>
+                            <a href="#" class="add-link header__link" id="add-company">
                                 Добавить компанию
                                 <div class="add-link__plus">+</div>
                             </a>
@@ -274,15 +276,15 @@
                         </nav>
                     </div>
                 </div>
+                <div class="company-modal">
+                    <input type="text" class="company-modal__input company-modal__input--name" placeholder="Наименования">
+                    <input type="text" class="company-modal__input company-modal__input--system" placeholder="Система налогообложения">
+                    <input type="text" class="company-modal__input company-modal__input--code" placeholder="ИНН">
+                    <input type="text" class="company-modal__input company-modal__input--activity" placeholder="Виды деятельности">
+                    <a href="#" class="company-modal__save">Сохранить</a>
+                </div>
             </div>
         </div>
-    </div>
-    <div class="company-modal">
-        <input type="text" class="company-modal__input company-modal__input--name" placeholder="Наименования">
-        <input type="text" class="company-modal__input company-modal__input--system" placeholder="Система налогообложения">
-        <input type="text" class="company-modal__input company-modal__input--code" placeholder="ИНН">
-        <input type="text" class="company-modal__input company-modal__input--activity" placeholder="Виды деятельности">
-        <a href="#" class="company-modal__save">Сохранить</a>
     </div>
     <script src="js/jquery-3.3.1.min.js"></script>
     <script src="js/jquery.arcticmodal-0.3.min.js"></script>
