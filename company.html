@@ -10,13 +10,12 @@
     <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/fonts.css">
-    <link rel="stylesheet" href="css/jquery.arcticmodal-0.3.css">
     <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
     <div class="wrapper">
         <div class="container company-container">
-            <div class="aside">
+            <div class="aside" id="aside-company">
                 <a href="company.html" class="ava">
                     <img src="img/smaylik-betmen.png" alt="avatar" class="ava__img">
                 </a>
@@ -33,6 +32,9 @@
                         <div class="header__counter">
                             121 всего
                         </div>
+                        <div class="humburger" id="hum-company">
+                            <img src="img/humburger.svg" alt="меню">
+                        </div>
                     </div>
                     <div class="header__nav">
                         <div class="header__search">
@@ -40,242 +42,244 @@
                             <div class="choice">
                                 <div class="choice__toogle"></div>
                             </div>
-                            <a href="#" class="add-link header__link" id="add-company">
-                                Добавить компанию
+                            <a href="#" class="add-link company-link" id="add-company">
+                                <span>Добавить компанию</span>
                                 <div class="add-link__plus">+</div>
                             </a>
                         </div>
                     </div>
                 </header>
                 <div class="content__data">
-                    <div class="company">
-                        <div class="company__header">
-                            <div class="company__subtitles">
-                                <div class="company__subtitle company__column-1">
-                                    Наименования 
-                                </div>
-                                <div class="company__subtitle company__column-2">
-                                    ИНН 
-                                </div>
-                                <div class="company__subtitle company__column-3">
-                                    Виды деятельности
-                                </div>
-                                <div class="company__subtitle company__column-4">
-                                    Система налогообложения
+                    <div class="horizontal-scrolling">
+                        <div class="company" id="company-scroll">
+                            <div class="company__header">
+                                <div class="company__subtitles">
+                                    <div class="company__subtitle company__column-1">
+                                        Наименования 
+                                    </div>
+                                    <div class="company__subtitle company__column-2">
+                                        ИНН 
+                                    </div>
+                                    <div class="company__subtitle company__column-3">
+                                        Виды деятельности
+                                    </div>
+                                    <div class="company__subtitle company__column-4">
+                                        Система налогообложения
+                                    </div>
                                 </div>
                             </div>
+                            <ul class="company__list">
+                                <li class="company__item">
+                                    <a href="common.html" class="company__link">
+                                        <div class="company__name company__column-1">
+                                            ООО «КАСКАДСТРОЙ»
+                                        </div>
+                                        <div class="company__code company__column-2">
+                                            78010501901
+                                        </div>
+                                        <div class="company__activity company__column-3">
+                                            Строительство
+                                        </div>
+                                        <div class="company__system company__column-4">
+                                            УСН
+                                        </div>
+                                    </a>
+                                </li>   
+                                <li class="company__item">
+                                    <a href="common.html" class="company__link">
+                                        <div class="company__name company__column-1">
+                                            ИП ЛОБОВ СЕРГЕЙ ВИКТОРОВИЧ
+                                        </div>
+                                        <div class="company__code company__column-2">
+                                            7018589185918
+                                        </div>
+                                        <div class="company__activity company__column-3">
+                                            Грузоперевозки
+                                        </div>
+                                        <div class="company__system company__column-4">
+                                            ОСН
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="company__item">
+                                    <a href="common.html" class="company__link">
+                                        <div class="company__name company__column-1">
+                                            АО «СТРОЙ-МОНТАЖ»
+                                        </div>
+                                        <div class="company__code company__column-2">
+                                            47018591002
+                                        </div>
+                                        <div class="company__activity company__column-3">
+                                            Ремонт компьютерной техники
+                                        </div>
+                                        <div class="company__system company__column-4">
+                                            ПСН
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="company__item">
+                                    <a href="common.html" class="company__link">
+                                        <div class="company__name company__column-1">
+                                            ООО «КАСКАДСТРОЙ»
+                                        </div>
+                                        <div class="company__code company__column-2">
+                                            47018591002
+                                        </div>
+                                        <div class="company__activity company__column-3">
+                                            Строительство
+                                        </div>
+                                        <div class="company__system company__column-4">
+                                            УСН
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="company__item">
+                                    <a href="common.html" class="company__link">
+                                        <div class="company__name company__column-1">
+                                            ИП ЛОБОВ СЕРГЕЙ ВИКТОРОВИЧ
+                                        </div>
+                                        <div class="company__code company__column-2">
+                                            7018589185918
+                                        </div>
+                                        <div class="company__activity company__column-3">
+                                            Грузоперевозки
+                                        </div>
+                                        <div class="company__system company__column-4">
+                                            ОСН
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="company__item">
+                                    <a href="common.html" class="company__link">
+                                        <div class="company__name company__column-1">
+                                            АО «СТРОЙ-МОНТАЖ»
+                                        </div>
+                                        <div class="company__code company__column-2">
+                                            47018591002
+                                        </div>
+                                        <div class="company__activity company__column-3">
+                                            Ремонт компьютерной техники
+                                        </div>
+                                        <div class="company__system company__column-4">
+                                            ПСН
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="company__item">
+                                    <a href="common.html" class="company__link">
+                                        <div class="company__name company__column-1">
+                                            АО «СТРОЙ-МОНТАЖ»
+                                        </div>
+                                        <div class="company__code company__column-2">
+                                            47018591002
+                                        </div>
+                                        <div class="company__activity company__column-3">
+                                            Ремонт компьютерной техники
+                                        </div>
+                                        <div class="company__system company__column-4">
+                                            ПСН
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="company__item">
+                                    <a href="common.html" class="company__link">
+                                        <div class="company__name company__column-1">
+                                            ООО «КАСКАДСТРОЙ»
+                                        </div>
+                                        <div class="company__code company__column-2">
+                                            47018591002
+                                        </div>
+                                        <div class="company__activity company__column-3">
+                                            Строительство
+                                        </div>
+                                        <div class="company__system company__column-4">
+                                            УСН
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="company__item">
+                                    <a href="common.html" class="company__link">
+                                        <div class="company__name company__column-1">
+                                            ИП ЛОБОВ СЕРГЕЙ ВИКТОРОВИЧ
+                                        </div>
+                                        <div class="company__code company__column-2">
+                                            7018589185918
+                                        </div>
+                                        <div class="company__activity company__column-3">
+                                            Грузоперевозки
+                                        </div>
+                                        <div class="company__system company__column-4">
+                                            ОСН
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="company__item company__item--mob">
+                                    <a href="common.html" class="company__link">
+                                        <div class="company__name company__column-1">
+                                            АО «СТРОЙ-МОНТАЖ»
+                                        </div>
+                                        <div class="company__code company__column-2">
+                                            47018591002
+                                        </div>
+                                        <div class="company__activity company__column-3">
+                                            Ремонт компьютерной техники
+                                        </div>
+                                        <div class="company__system company__column-4">
+                                            ПСН
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="company__item company__item--mob">
+                                    <a href="common.html" class="company__link">
+                                        <div class="company__name company__column-1">
+                                            ИП ЛОБОВ СЕРГЕЙ ВИКТОРОВИЧ
+                                        </div>
+                                        <div class="company__code company__column-2">
+                                            7018589185918
+                                        </div>
+                                        <div class="company__activity company__column-3">
+                                            Грузоперевозки
+                                        </div>
+                                        <div class="company__system company__column-4">
+                                            ОСН
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="company__item company__item--mob">
+                                    <a href="common.html" class="company__link">
+                                        <div class="company__name company__column-1">
+                                            АО «СТРОЙ-МОНТАЖ»
+                                        </div>
+                                        <div class="company__code company__column-2">
+                                            47018591002
+                                        </div>
+                                        <div class="company__activity company__column-3">
+                                            Ремонт компьютерной техники
+                                        </div>
+                                        <div class="company__system company__column-4">
+                                            ПСН
+                                        </div>
+                                    </a>
+                                </li>
+                            </ul>
                         </div>
-                        <ul class="company__list">
-                            <li class="company__item">
-                                <a href="common.html" class="company__link">
-                                    <div class="company__name company__column-1">
-                                        ООО «КАСКАДСТРОЙ»
-                                    </div>
-                                    <div class="company__code company__column-2">
-                                        78010501901
-                                    </div>
-                                    <div class="company__activity company__column-3">
-                                        Строительство
-                                    </div>
-                                    <div class="company__system company__column-4">
-                                        УСН
-                                    </div>
-                                </a>
-                            </li>   
-                            <li class="company__item company__item--active">
-                                <a href="common.html" class="company__link">
-                                    <div class="company__name company__column-1">
-                                        ИП ЛОБОВ СЕРГЕЙ ВИКТОРОВИЧ
-                                    </div>
-                                    <div class="company__code company__column-2">
-                                        7018589185918
-                                    </div>
-                                    <div class="company__activity company__column-3">
-                                        Грузоперевозки
-                                    </div>
-                                    <div class="company__system company__column-4">
-                                        ОСН
-                                    </div>
-                                </a>
-                            </li>
-                            <li class="company__item">
-                                <a href="common.html" class="company__link">
-                                    <div class="company__name company__column-1">
-                                        АО «СТРОЙ-МОНТАЖ»
-                                    </div>
-                                    <div class="company__code company__column-2">
-                                        47018591002
-                                    </div>
-                                    <div class="company__activity company__column-3">
-                                        Ремонт компьютерной техники
-                                    </div>
-                                    <div class="company__system company__column-4">
-                                        ПСН
-                                    </div>
-                                </a>
-                            </li>
-                            <li class="company__item">
-                                <a href="common.html" class="company__link">
-                                    <div class="company__name company__column-1">
-                                        ООО «КАСКАДСТРОЙ»
-                                    </div>
-                                    <div class="company__code company__column-2">
-                                        47018591002
-                                    </div>
-                                    <div class="company__activity company__column-3">
-                                        Строительство
-                                    </div>
-                                    <div class="company__system company__column-4">
-                                        УСН
-                                    </div>
-                                </a>
-                            </li>
-                            <li class="company__item">
-                                <a href="common.html" class="company__link">
-                                    <div class="company__name company__column-1">
-                                        ИП ЛОБОВ СЕРГЕЙ ВИКТОРОВИЧ
-                                    </div>
-                                    <div class="company__code company__column-2">
-                                        7018589185918
-                                    </div>
-                                    <div class="company__activity company__column-3">
-                                        Грузоперевозки
-                                    </div>
-                                    <div class="company__system company__column-4">
-                                        ОСН
-                                    </div>
-                                </a>
-                            </li>
-                            <li class="company__item">
-                                <a href="common.html" class="company__link">
-                                    <div class="company__name company__column-1">
-                                        АО «СТРОЙ-МОНТАЖ»
-                                    </div>
-                                    <div class="company__code company__column-2">
-                                        47018591002
-                                    </div>
-                                    <div class="company__activity company__column-3">
-                                        Ремонт компьютерной техники
-                                    </div>
-                                    <div class="company__system company__column-4">
-                                        ПСН
-                                    </div>
-                                </a>
-                            </li>
-                            <li class="company__item">
-                                <a href="common.html" class="company__link">
-                                    <div class="company__name company__column-1">
-                                        АО «СТРОЙ-МОНТАЖ»
-                                    </div>
-                                    <div class="company__code company__column-2">
-                                        47018591002
-                                    </div>
-                                    <div class="company__activity company__column-3">
-                                        Ремонт компьютерной техники
-                                    </div>
-                                    <div class="company__system company__column-4">
-                                        ПСН
-                                    </div>
-                                </a>
-                            </li>
-                            <li class="company__item">
-                                <a href="common.html" class="company__link">
-                                    <div class="company__name company__column-1">
-                                        ООО «КАСКАДСТРОЙ»
-                                    </div>
-                                    <div class="company__code company__column-2">
-                                        47018591002
-                                    </div>
-                                    <div class="company__activity company__column-3">
-                                        Строительство
-                                    </div>
-                                    <div class="company__system company__column-4">
-                                        УСН
-                                    </div>
-                                </a>
-                            </li>
-                            <li class="company__item">
-                                <a href="common.html" class="company__link">
-                                    <div class="company__name company__column-1">
-                                        ИП ЛОБОВ СЕРГЕЙ ВИКТОРОВИЧ
-                                    </div>
-                                    <div class="company__code company__column-2">
-                                        7018589185918
-                                    </div>
-                                    <div class="company__activity company__column-3">
-                                        Грузоперевозки
-                                    </div>
-                                    <div class="company__system company__column-4">
-                                        ОСН
-                                    </div>
-                                </a>
-                            </li>
-                            <li class="company__item">
-                                <a href="common.html" class="company__link">
-                                    <div class="company__name company__column-1">
-                                        АО «СТРОЙ-МОНТАЖ»
-                                    </div>
-                                    <div class="company__code company__column-2">
-                                        47018591002
-                                    </div>
-                                    <div class="company__activity company__column-3">
-                                        Ремонт компьютерной техники
-                                    </div>
-                                    <div class="company__system company__column-4">
-                                        ПСН
-                                    </div>
-                                </a>
-                            </li>
-                            <li class="company__item">
-                                <a href="common.html" class="company__link">
-                                    <div class="company__name company__column-1">
-                                        ИП ЛОБОВ СЕРГЕЙ ВИКТОРОВИЧ
-                                    </div>
-                                    <div class="company__code company__column-2">
-                                        7018589185918
-                                    </div>
-                                    <div class="company__activity company__column-3">
-                                        Грузоперевозки
-                                    </div>
-                                    <div class="company__system company__column-4">
-                                        ОСН
-                                    </div>
-                                </a>
-                            </li>
-                            <li class="company__item">
-                                <a href="common.html" class="company__link">
-                                    <div class="company__name company__column-1">
-                                        АО «СТРОЙ-МОНТАЖ»
-                                    </div>
-                                    <div class="company__code company__column-2">
-                                        47018591002
-                                    </div>
-                                    <div class="company__activity company__column-3">
-                                        Ремонт компьютерной техники
-                                    </div>
-                                    <div class="company__system company__column-4">
-                                        ПСН
-                                    </div>
-                                </a>
-                            </li>
-                        </ul>
-                        <nav class="pagination">
-                            <div class="pagination__links">
-                                <a href="#" class="prev">
-                                    <img src="img/arrow.svg" alt="предыдцщая">
-                                </a>
-                                <a href="#" class="pagination__num pagination__num--active">1</a>
-                                <a href="#" class="pagination__num">2</a>
-                                <a href="#" class="pagination__break"></a>
-                                <a href="#" class="pagination__num">8</a>
-                                <a href="#" class="pagination__num">9</a>
-                                <a href="#" class="next">
-                                    <img src="img/arrow.svg" alt="следующая">
-                                </a>
-                            </div>
-                        </nav>
                     </div>
                 </div>
+                <nav class="pagination pagination--company">
+                    <div class="pagination__links">
+                        <a href="#" class="prev">
+                            <img src="img/arrow.svg" alt="предыдцщая">
+                        </a>
+                        <a href="#" class="pagination__num pagination__num--active">1</a>
+                        <a href="#" class="pagination__num">2</a>
+                        <a href="#" class="pagination__break"></a>
+                        <a href="#" class="pagination__num">8</a>
+                        <a href="#" class="pagination__num">9</a>
+                        <a href="#" class="next">
+                            <img src="img/arrow.svg" alt="следующая">
+                        </a>
+                    </div>
+                </nav>
                 <div class="company-modal">
                     <input type="text" class="company-modal__input company-modal__input--name" placeholder="Наименования">
                     <input type="text" class="company-modal__input company-modal__input--system" placeholder="Система налогообложения">
@@ -287,7 +291,6 @@
         </div>
     </div>
     <script src="js/jquery-3.3.1.min.js"></script>
-    <script src="js/jquery.arcticmodal-0.3.min.js"></script>
     <script src="js/main.js"></script>    
 </body>
 </html>

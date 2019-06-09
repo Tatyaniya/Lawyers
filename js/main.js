@@ -1,15 +1,5 @@
 $(function () {
     
-    // menu
-
-   /*$('.menu__link--common').mousemove(function(){
-        $( ".menu__link--common:after" ).animate({
-            display: "inline-block",
-            opacity: 1
-          }, 500, function() {
-          });
-    });*/
-    
     // modal company
 
     $('#add-company').click(function(){
@@ -33,12 +23,15 @@ $(function () {
     // choice
 
     $('.choice').click(function(){
-        console.log('.choice');
         $('.choice__toogle').toggleClass('choice__toogle--name');
     });
 
+    $('#hum-company').click(function(){
+        $('#aside-company').toggleClass('d-flex');
+    });
 
+    $('.humburger-all').click(function(){
+        $('.aside').toggleClass('d-flex');
+    });
     
-  
-
 });
