@@ -10,13 +10,12 @@
     <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/fonts.css">
-    <link rel="stylesheet" href="css/jquery.arcticmodal-0.3.css">
     <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
     <div class="wrapper">
         <div class="container common-container">
-            <div class="aside">
+            <div class="aside aside-mob">
                 <a href="company.html" class="ava">
                     <img src="img/smaylik-betmen.png" alt="avatar" class="ava__img">
                 </a>
@@ -42,9 +41,7 @@
                         </li>
                     </ul>
                 </nav>
-                <div class="enter">
-                    <a href="index.html" class="enter"></a>
-                </div>
+                <a href="index.html" class="enter"></a>
             </div>
             <div class="content common-content">
                 <header class="header">
@@ -131,13 +128,27 @@
                             </p>
                         </div>
                     </div>
+                    <nav class="pagination">
+                        <div class="pagination__links">
+                            <a href="#" class="prev">
+                                <img src="img/arrow.svg" alt="предыдцщая">
+                            </a>
+                            <a href="#" class="pagination__num pagination__num--active">1</a>
+                            <a href="#" class="pagination__num">2</a>
+                            <a href="#" class="pagination__break"></a>
+                            <a href="#" class="pagination__num">8</a>
+                            <a href="#" class="pagination__num">9</a>
+                            <a href="#" class="next">
+                                <img src="img/arrow.svg" alt="следующая">
+                            </a>
+                        </div>
+                    </nav>
                 </div>
             </div>
         </div>
         </div>
     </div>
     <script src="js/jquery-3.3.1.min.js"></script>
-    <script src="js/jquery.arcticmodal-0.3.min.js"></script>
     <script src="js/main.js"></script>    
 </body>
 </html>
