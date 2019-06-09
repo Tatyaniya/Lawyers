@@ -1145,6 +1145,15 @@ input:focus {
     .content__desc-text {
         width: 100%;
     }
+    .edit-link:hover,
+    .save-link:hover {
+        transform: scale(1);
+        box-shadow: 0px 0px 15px #ED546D;
+        -webkit-transform: scale(1);
+        -moz-transform: scale(1);
+        -ms-transform: scale(1);
+        -o-transform: scale(1);
+}
 }
 
 @media screen and (max-width: 768px) {
